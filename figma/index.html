@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
+
+    <title>figma</title>
+  </head>
+  <body>
+    <div id="form-container-1" class="form-container" style="display: block">
+      <h1>REQUEST AN ESTIMATE</h1>
+      <p class="subtitle">3 EASY STEPS TO A PERSONAL QUOTE</p>
+
+      <div class="step-indicator">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <form>
+        <div class="custom-input-container">
+          <p>Origin Address / Postal Code</p>
+          <input required type="text" placeholder="Moving From" />
+        </div>
+
+        <div class="custom-input-container">
+          <p>Origin Destination / Postal Code</p>
+          <input required type="text" placeholder="Moving To" />
+        </div>
+
+        <div class="input-container row">
+          <div class="custom-small-input-container">
+            <div class="dropdown">
+              <p>Stairs</p>
+              <input
+                readonly
+                type="text"
+                id="small-input1"
+                placeholder="Origin"
+              />
+              <button
+                type="button"
+                class="dropdown-toggle"
+                onclick="toggleImage(this)"
+              >
+                <img src="/Vector.png" alt="" class="button-icon" />
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="border-radius: 26px; padding: 15px"
+              >
+                <h4 style="color: rgba(204, 0, 24, 1)">Choose Floor</h4>
+                <div
+                  style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                  "
+                >
+                  <li><input type="checkbox" />1</li>
+                  <li><input type="checkbox" />2</li>
+                  <li><input type="checkbox" />3</li>
+                  <li><input type="checkbox" />4</li>
+                  <li><input type="checkbox" />5</li>
+                  <li><input type="checkbox" />6</li>
+
+                  <span style="width: 120px"
+                    ><input type="checkbox" />Elevator</span
+                  >
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="custom-small-input-container">
+            <div class="dropdown">
+              <p>Stairs</p>
+              <input
+                type="text"
+                id="small-input2"
+                placeholder="Destination"
+                readonly
+              />
+              <button
+                type="button"
+                class="dropdown-toggle"
+                onclick="toggleImage(this)"
+              >
+                <img src="Vector.png" class="button-icon" alt="" />
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="border-radius: 26px; padding: 15px"
+              >
+                <h4 style="color: rgba(204, 0, 24, 1)">Choose Floor</h4>
+                <div
+                  style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                  "
+                >
+                  <li><input type="checkbox" />1</li>
+                  <li><input type="checkbox" />2</li>
+                  <li><input type="checkbox" />3</li>
+                  <li><input type="checkbox" />4</li>
+                  <li><input type="checkbox" />5</li>
+                  <li><input type="checkbox" />6</li>
+
+                  <span style="width: 120px"
+                    ><input type="checkbox" />Elevator</span
+                  >
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="button" onclick="getQuote()">
+          GET A QUOTE <img src="/Arrow.png" alt="arrow" />
+        </button>
+
+        <!-- Надпись "or" и вторая кнопка -->
+        <p class="or">OR</p>
+        <button onclick="nextStep()" type="button" class="secondary-button">
+          ORDER A CALL BACK
+        </button>
+      </form>
+    </div>
+    <div id="form-container-2" class="form-container" style="display: none">
+      <h1>CALL ME BACK</h1>
+      <p class="subtitle">
+        3 EASY STEPS to A PERSONAL QUOTE 3 EASY STEPS to A PERSONAL QUOTE3 EASY
+        STEPS to A PERSONAL QUOTE
+      </p>
+
+      <div class="step-indicator">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <form>
+        <div class="custom-input-container">
+          <p>Full Name</p>
+          <input required type="text" placeholder="Your Name" />
+        </div>
+        <div class="custom-input-container">
+          <p>Phone</p>
+          <input required type="text" placeholder="Type phone" />
+        </div>
+        <div style="display: flex; gap: 6px; margin-bottom: 30px">
+          <input type="checkbox" style="align-self: flex-start" />
+          <p style="font-size: 10px">
+            By clicking on “Request a Quote”, I agree to being contacted by
+            text, SMS, email, or phone, including an automated dialing system or
+            pre-recorded voice in connection with my upcoming move from or on
+            behalf of Flash Moving Company. Message and data rates may apply.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button
+            onclick="back()"
+            type="button"
+            class="secondary-button"
+            style="width: auto"
+          >
+            BACK
+          </button>
+          <button type="submit">
+            <img src="/icon phone.png" alt="" />REQUEST CALL
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="form-container-3" class="form-container" style="display: none">
+      <h1>REQUEST AN ESTIMATE</h1>
+      <p class="subtitle">3 EASY STEPS TO A PERSONAL QUOTE</p>
+
+      <div class="step-indicator marked_indicator">
+        <span class="dot marked"></span>
+        <span class="dot marked"></span>
+        <span class="dot"></span>
+      </div>
+
+      <form>
+        <div class="custom-small-input-container">
+          <div class="dropdown">
+            <p>Move Date</p>
+            <input
+              id="datepicker"
+              type="date"
+              id="small-input2"
+              placeholder="2024-03-22"
+              readonly
+            />
+            <button type="button" class="dropdown-toggle">
+              <img src="/Calendar icon.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+        </div>
+        <div class="custom-small-input-container">
+          <div class="dropdown">
+            <p>Move Size</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Choose Size"
+              readonly
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul
+              class="dropdown-menu"
+              style="z-index: 1; border-radius: 26px; padding: 15px"
+            >
+              <h4 style="color: rgba(204, 0, 24, 1)">Choose Size</h4>
+              <div class="lists custom-scroll" id="scrollbar">
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>Room or less</li>
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>2 Bedroom House</li>
+                <li>3 Bedroom House</li>
+                <li>4+ Bedroom House</li>
+                <li>Storage Unit</li>
+                <li>Office Small</li>
+                <li>Office Medium</li>
+                <li>Office Large</li>
+                <li>Other</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="custom-small-input-container">
+          <div class="dropdown">
+            <p>How Did You Hear About Us?</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Choose Variant"
+              readonly
+              style="width: 95px"
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button onclick="back2()" type="button" class="secondary-button">
+            BACK
+          </button>
+          <button onclick="nextStep2()" type="button">NEXT</button>
+        </div>
+      </form>
+    </div>
+    <div style="display: none" id="form-container-4" class="form-container">
+      <h1>REQUEST AN ESTIMATE</h1>
+      <p class="subtitle">3 EASY STEPS TO A PERSONAL QUOTE</p>
+
+      <div class="step-indicator marked_indicator">
+        <span class="dot marked"></span>
+        <span class="dot marked"></span>
+        <span class="dot marked"></span>
+      </div>
+
+      <form style="display: flex; flex-direction: column; gap: 7px">
+        <div class="custom-input-container custom" style="margin-bottom: 0">
+          <p>Full Name</p>
+          <input id="phone" required type="text" placeholder="Your Name" />
+        </div>
+        <span class="error-message" id="phone-error"></span>
+        <div class="custom-input-container custom" style="margin-bottom: 0">
+          <p>Phone</p>
+          <input id="phone" required type="text" placeholder="Type phone" />
+        </div>
+        <span class="error-message" id="phone-error"></span>
+        <div class="custom-input-container custom" style="margin-bottom: 0">
+          <p>Email</p>
+          <input id="phone" required type="email" placeholder="Your Email" />
+        </div>
+        <span class="error-message" id="phone-error"></span>
+        <div style="display: flex; gap: 10px">
+          <button onclick="back3()" type="button" class="secondary-button">
+            BACK
+          </button>
+          <button id="validateBtn" type="button">NEXT</button>
+        </div>
+      </form>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

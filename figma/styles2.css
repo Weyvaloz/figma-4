@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+h1 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: -2%;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2%;
+  margin-bottom: 40px;
+  color: rgba(96, 96, 96, 1);
+}
+
+.custom-input-container {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  padding: 6px 137px 6px 30px;
+  position: relative;
+}
+
+.custom-input-container p {
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+}
+
+.custom-input-container input {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+}
+
+.custom-small-input-container {
+  position: relative;
+}
+
+.custom-small-input-container p {
+  margin: 0 0 5px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+}
+.calendar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.dropdown {
+  position: relative;
+  padding: 5px 178px 7px 25px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.dropdown p {
+  margin: 0;
+}
+
+.dropdown input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 75px;
+}
+
+.dropdown button.dropdown-toggle {
+  position: absolute;
+  top: 0%;
+  right: 14px;
+  bottom: 0;
+  width: 30px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  list-style-type: none;
+}
+
+.dropdown.open ul.dropdown-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+  gap: 4px;
+  scrollbar-color: rgba(0, 0, 0, 1) rgba(217, 217, 217, 1); /* Цвет ползунка и его фона */
+}
+.dropdown.open ul.dropdown-menu input {
+  width: 20px;
+}
+.input-container.row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 26px 14px 26px;
+  background-color: rgba(204, 0, 24, 1);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.submit_part {
+  display: flex;
+  gap: 10px;
+}
+.submit_part p {
+  width: 748px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.back_send_btn {
+  display: flex;
+  gap: 10px;
+}
+.back_send_btn button {
+  width: 180px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 20px;
+}
+button.secondary-button {
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 0;
+  color: rgba(204, 0, 24, 1);
+  border: 2px solid rgba(204, 0, 24, 1);
+}
+.next_btn {
+  width: 380px;
+}
+
+.or {
+  text-align: center;
+  margin: 10px 0;
+  color: rgba(204, 0, 24, 1);
+  font-size: 12px;
+  font-weight: 700;
+}
+.step-indicator {
+  display: flex;
+  width: 430px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 380px;
+}
+
+.step-indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background-color: rgba(217, 217, 217, 1);
+  z-index: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.stairs {
+  position: relative;
+  padding: 4px 56px 5px 26px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+.dropdown-menu li {
+  width: 60px;
+}
+input[type="checkbox"] {
+  accent-color: rgba(204, 0, 24, 1); /* Меняет цвет чекбокса на красный */
+}
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 180px;
+
+  overflow-x: auto; /* Скроллинг при превышении высоты */
+}
+.lists li {
+  width: 288px;
+}
+.marked {
+  /* ВАШИ СТИЛИ */
+  background-color: #333;
+}
+.marked_indicator::before {
+  background-color: #333;
+}

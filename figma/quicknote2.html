@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>figma</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>GET A QUICK QUOTE</h1>
+      <p class="subtitle">2 SUPER EASY STEPS TO RECEIVE A PERSONAL QUOTE</p>
+
+      <div class="step-indicator">
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <form>
+        <div class="custom-input-container">
+          <p>Full Name</p>
+          <input type="text" placeholder="Your Name" />
+        </div>
+        <div class="custom-input-container">
+          <p>Phone</p>
+          <input type="text" placeholder="Type phone" />
+        </div>
+        <div class="custom-input-container">
+          <p>Email</p>
+          <input type="email" placeholder="Your Email" />
+        </div>
+
+        <div class="custom-small-input-container">
+          <div
+            class="dropdown"
+            style="width: 349px; padding: 5px 89px 6px 25px"
+          >
+            <p>Move Date</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="2024-03-22"
+              readonly
+            />
+            <button type="button" class="dropdown-toggle">
+              <img src="/Calendar icon.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+        </div>
+        <div class="custom-small-input-container">
+          <div
+            class="dropdown"
+            style="width: 349px; padding: 5px 89px 6px 25px"
+          >
+            <p>Moving Sizes</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Choose Size"
+              readonly
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul
+              class="dropdown-menu"
+              style="z-index: 1; border-radius: 26px; padding: 15px"
+            >
+              <h4 style="color: rgba(204, 0, 24, 1)">Choose Size</h4>
+              <div class="lists">
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>Room or less</li>
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>2 Bedroom House</li>
+                <li>3 Bedroom House</li>
+                <li>4+ Bedroom House</li>
+                <li>Storage Unit</li>
+                <li>Office Small</li>
+                <li>Office Medium</li>
+                <li>Office Large</li>
+                <li>Other</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="custom-small-input-container">
+          <div
+            class="dropdown"
+            style="width: 349px; padding: 5px 89px 6px 25px"
+          >
+            <p>How Did You Hear About Us?</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Choose Variant"
+              readonly
+              style="width: 95px"
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+        </div>
+        <div class="custom-small-input-container" style="width: 684px">
+          <div class="dropdown">
+            <p>Leave us comments about your move or inventory</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Your comments"
+              readonly
+              style="width: 95px"
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu"></ul>
+          </div>
+        </div>
+        <div class="back_send_btn">
+          <button type="button" class="secondary-button">BACK</button>
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

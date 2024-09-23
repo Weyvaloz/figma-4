@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>figma</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <div class="custom-input-container">
+          <p>Full Name</p>
+          <input type="text" placeholder="Your Name" />
+        </div>
+        <div class="custom-input-container">
+          <p>Phone</p>
+          <input type="text" placeholder="Type phone" />
+        </div>
+        <div class="custom-input-container">
+          <p>Email</p>
+          <input type="email" placeholder="Your Email" />
+        </div>
+
+        <div class="custom-input-container" style="padding: 6px 60px 6px 31px;
+;">
+          <p>When are you planning to move?</p>
+          <input            id="datepicker"
+          type="date" placeholder="Move Date" />
+        </div>
+        <div class="custom-small-input-container" >
+          <div class="dropdown" style="padding: 5px 217px 7px 25px;">
+            <p>Moving Sizes</p>
+            <input
+              type="text"
+              id="small-input2"
+              placeholder="Choose Size"
+              readonly
+            />
+            <button
+              type="button"
+              class="dropdown-toggle"
+              onclick="toggleImage(this)"
+            >
+              <img src="Vector.png" class="button-icon" alt="" />
+            </button>
+            <ul class="dropdown-menu" style="z-index: 1;padding: 18px;border-radius: 26px;">
+              <h4 >Choose Size</h4>
+              <div class="lists custom-scroll" id="scrollbar">
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>Room or less</li>
+                <li>Studio Apartment</li>
+                <li>1 Bedroom Apartment</li>
+                <li>2 Bedroom Apartment</li>
+                <li>3 Bedroom Apartment</li>
+                <li>1 Bedroom House</li>
+                <li>2 Bedroom House</li>
+                <li>3 Bedroom House</li>
+                <li>4+ Bedroom House</li>
+                <li>Storage Unit</li>
+                <li>Office Small</li>
+                <li>Office Medium</li>
+                <li>Office Large</li>
+                <li>Other</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+
+          <button type="submit" style="width: 340px; height: 60px;  background-color: rgba(0, 0, 0, 1); color: rgba(255, 255, 255, 1); font-weight: 700; font-size: 20px;">GET ESTIMATE NOW</button>
+        </div>
+      </form>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
